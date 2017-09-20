@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>br.com.dojot.mutualauthentication.serviceregistry</groupId>
+    <artifactId>ServiceRegistry</artifactId>
+    <version>1.1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>ServiceRegistry [ServiceRegistry Microservice]</name>
+    <url>http://www.dojot.com.br/</url>
+
+    <modules>
+		<module>ServiceRegistry-jar</module>
+		<module>ServiceRegistry-ejb</module>
+		<module>ServiceRegistry-ws</module>
+        <module>ServiceRegistry-ear</module>
+    </modules>
+
+    <properties>
+        <communication.version>1.1.0-SNAPSHOT</communication.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+        <javaee.version>7.0</javaee.version>
+        <ejb.version>3.2</ejb.version>
+        <junit.version>4.11</junit.version>
+        <resteasy.version>3.0.8.Final</resteasy.version>
+    </properties>
+
+	<distributionManagement>
+		<repository>
+			<id>distribution.repo</id>
+			<name>CPqD Release Repository</name>
+			<url>https://cnexus.cpqd.com.br/content/repositories/cpqd-release</url>
+			<uniqueVersion>false</uniqueVersion>
+		</repository>
+
+		<snapshotRepository>
+			<id>distribution.repo</id>
+			<name>CPqD Snapshot Repository</name>
+			<url>https://cnexus.cpqd.com.br/content/repositories/cpqd-snapshot</url>
+			<uniqueVersion>false</uniqueVersion>
+		</snapshotRepository>
+	</distributionManagement>
+
+</project>
