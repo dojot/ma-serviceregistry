@@ -4,11 +4,9 @@ FORMAT: 1A
 
 Service Registry manages the registration of services used on the mutual authentication process.
 
-## Registry [/registry]
+## Data Structures
 
-### Data Structures
-
-#### Service Registry (object)
+### Service Registry (object)
 + port: (string)
 + context: (string)
 + hostname: (string)
@@ -16,7 +14,7 @@ Service Registry manages the registration of services used on the mutual authent
 + microservice: (string)
 + version: (string)
 
-#### Service Location (object)
+### Service Location (object)
 + target: (string)
 + restful: (string)
 + method: (string)
@@ -24,6 +22,7 @@ Service Registry manages the registration of services used on the mutual authent
 + version: (string)
 + microservice: (string)
 
+# Group Registry
 
 ### Check all microservices [/registry/check]
 
@@ -48,18 +47,20 @@ Service Registry manages the registration of services used on the mutual authent
     + Attributes (Service Registry)
 
 + Response 200 (aplication/json)
-    {
-        "result" : "true"
-    }
+
+        {
+            "result" : "true"
+        }
 
 
 ### Unregister service [/registry/unregister]
 
-#### unregister [POST]
+#### Unregister [POST]
 + Request (application/json)
     + Attributes (Service Registry)
 
 + Response 200 (aplication/json)
-    {
-        "result" : "true"
-    }
+
+        {
+            "result" : "true"
+        }
